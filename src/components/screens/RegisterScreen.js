@@ -3,7 +3,7 @@ import React,
 import { Link } from 'react-router-dom'
 import Message from "../Message";
 import Loader from "../Loader";
-import { Row, Col, Form, Button, Card } from 'react-bootstrap'
+import { Row, Col, Form, Button} from 'react-bootstrap'
 import { useDispatch, useSelector } from "react-redux";
 import { register } from '../../actions/userActions'
 import FormContainer from '../FormContainer'
@@ -32,7 +32,7 @@ function RegisterScreen({location,history}) {
 
     const submitHandler= (e)=>{
         e.preventDefault()
-        if(password!=confirmPassword){
+        if(password!==confirmPassword){
             setMessage('Password do not Match')
         }
         else{

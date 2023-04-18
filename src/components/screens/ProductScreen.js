@@ -6,7 +6,7 @@ import Loader from '../Loader';
 import Message from '../Message';
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../../actions/productAction";
-import { productDetailsReducers } from "../../reducers/productReducers";
+
 
 function ProductScreen({ match,history }) {
 
@@ -119,7 +119,7 @@ function ProductScreen({ match,history }) {
                 <ListGroup.Item>
                   <Button
                     className="btn-block"
-                    disabled={product.countInStock == 0}
+                    disabled={product.countInStock === 0}
                     type="button"
                     onClick={addToCartHandler}
                   >
